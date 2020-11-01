@@ -1,0 +1,13 @@
+0;499;AWP_medusa.png;2000
+500;999;AWP_dragonlore.png;2100
+1000;1499;AWP_gungnir.png;200
+1500;1999;AWP_prince.png;1500
+2000;7999;AWP_wildfire.png;85
+8000;12999;AWP_containment.png;85
+13000;18999;AWP_onitaiji.png;85
+19000;24999;AWP_graphite.png;85
+25000;32999;AWP_electrichive.png;25
+33000;41999;AWP_hyperbeast.png;25
+42000;49999;AWP_redline.png;25
+50000;74999;AWP_wormgod.png;2
+75000;99999;AWP_phobos.png;2

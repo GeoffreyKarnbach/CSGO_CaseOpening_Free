@@ -1,0 +1,14 @@
+0;499;AK_wildlotus.png;1500
+500;1299;AK_fireserpent.png;800
+1300;2499;AK_jetset.png;600
+2500;3499;AK_hydroponic.png;550
+3500;4999;AK_vulcan.png;220
+5000;9999;AK_theempress.png;90
+10000;14999;AK_fuelinjector.png;80
+15000;19999;AK_bloodsport.png;80
+20000;24999;AK_casehardened.png;80
+25000;32999;AK_neonrevolution.png;40
+33000;41999;AK_aquamarine.png;39
+42000;49999;AK_wastelandrebel.png;33
+50000;74999;AK_redline.png;12
+75000;99999;AK_ratrod.png;9

@@ -1,0 +1,14 @@
+0;499;M4_howl.png;1400
+500;1199;M4_knight.png;1100
+1200;2199;M4_poseidon.png;800
+2200;3499;M4_hotrod.png;150
+3500;4999;M4_icarusfell.png;135
+5000;9999;M4_asiimov.png;95
+10000;14999;M4_playertwo.png;85
+15000;19999;M4_theemperor.png;80
+20000;24999;M4_masterpiece.png;75
+25000;32999;M4_hellfire.png;40
+33000;41499;M4_hyperbeast.png;45
+41500;49999;M4_goldencoil.png;44
+50000;74999;M4_desolatespace.png;13
+75000;99999;M4_nightmare.png;12
