@@ -1,0 +1,14 @@
+0;499;AK-Wild-Lotus.png;1500
+500;1299;AK-Fire-Serpent.png;800
+1300;2499;AK-Jet-Set.png;600
+2500;3499;AK-Hydroponic.png;550
+3500;4999;AK-Vulcan.png;220
+5000;9999;AK-The-Empress.png;90
+10000;14999;AK-Fuel-Injector.png;80
+15000;19999;AK-Bloodsport.png;80
+20000;24999;AK-Case-Hardened.png;80
+25000;32999;AK-Neon-Revolution.png;40
+33000;41999;AK-Aquamarine-Revenge.png;39
+42000;49999;AK-Wasteland-Rebel.png;33
+50000;74999;AK-Redline.png;12
+75000;99999;AK-Rat-Rod.png;9

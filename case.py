@@ -19,6 +19,16 @@ def generate_image_series(filename):
         sequence.append(random.choice(image_list))
     return sequence
 
+def get_case_info(filename):
+    with open(filename,"r") as f:
+        content=f.readlines()
+    skins=[]
+    
+    for loop in content:
+        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),int(loop.split(";")[3].rstrip())])
+        
+    return skins
+
 def pull(filename):
     with open(filename,"r") as f:
         content=f.readlines()
@@ -52,6 +62,6 @@ def get_expected_value(filename):
 
     print(drops,total/amountLoop)
 
-#get_expected_value("case3.txt")
-#print(pull("case3.txt"))
+#get_expected_value("Cases/case1.txt")
+#print(pull("Cases/case3.txt"))
 
