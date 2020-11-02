@@ -5,6 +5,20 @@ def get_skin_from_ticket(ID,skins):
         if ID>=skins[loop][0] and ID <= skins[loop][1]:
             return (skins[loop][2],skins[loop][3])
 
+def generate_image_series(filename):
+    with open(filename,"r") as f:
+        content=f.readlines()
+    image_list=[]
+    
+    for loop in content:
+        image_list.append(loop.split(";")[2].rstrip())
+
+    sequence=[]
+
+    for loop in range(50):
+        sequence.append(random.choice(image_list))
+    return sequence
+
 def pull(filename):
     with open(filename,"r") as f:
         content=f.readlines()
@@ -37,7 +51,6 @@ def get_expected_value(filename):
             drops[result]+=1
 
     print(drops,total/amountLoop)
-
 
 #get_expected_value("case3.txt")
 #print(pull("case3.txt"))
