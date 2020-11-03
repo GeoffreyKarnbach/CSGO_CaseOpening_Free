@@ -6,7 +6,7 @@ import random,deposit
 def update_user_account(ID):
     global user_coins,case_prices
     user_coins-=case_prices[ID]
-    balance.config(text="Balance: "+str(user_coins))
+    balance.config(text="Balance: "+str(round(user_coins,2)))
 
 def keepSkin(info):
     global inventory
@@ -16,7 +16,7 @@ def keepSkin(info):
 def sellSkin(info):
     global user_coins
     user_coins+=info[1]
-    balance.config(text="Balance: "+str(user_coins))
+    balance.config(text="Balance: "+str(round(user_coins,2)))
     main_menu(None)
 
 def case_info(ID):
@@ -75,23 +75,12 @@ def main_menu(event):
     menubar.entryconfig(3,state=NORMAL)
     fen.title("CS:GO Case opening")
 
-    photo1=PhotoImage(file=case_thumbnails[0])
-    photo1=photo1.subsample(2,2)
-    b1=Button(frame,text="AWP-DELUXE-CASE",command = lambda x=0: case_info(x),image=photo1, compound="top",bg="white",font="Verdana 11")
-    b1.image=photo1
-    b1.grid(column=0,row=0,padx=10,pady=10)
-
-    photo2=PhotoImage(file=case_thumbnails[1])
-    photo2=photo2.subsample(2,2)
-    b2=Button(frame,text="AK-DELUXE-CASE",command = lambda x=1: case_info(x),image=photo2, compound="top",bg="white",font="Verdana 11")
-    b2.image=photo2
-    b2.grid(column=1,row=0,padx=10,pady=10)
-
-    photo3=PhotoImage(file=case_thumbnails[2])
-    photo3=photo3.subsample(2,2)
-    b3=Button(frame,text="M4-DELUXE-CASE",command = lambda x=2: case_info(x),image=photo3, compound="top",bg="white",font="Verdana 11")
-    b3.image=photo3
-    b3.grid(column=2,row=0,padx=10,pady=10)
+    for loop in range(len(filenames)):
+        photo=PhotoImage(file=case_thumbnails[loop])
+        photo1=photo.subsample(3,3)
+        b1=Button(frame,text=casenames[loop],command = lambda x=loop: case_info(x),image=photo1, compound="top",bg="white",font="Verdana 11")
+        b1.image=photo1
+        b1.grid(column=loop%6,row=loop//6,padx=10,pady=10)
 
 def item_iventory(ID):
     for widget in frame.winfo_children():
@@ -102,7 +91,7 @@ def item_iventory(ID):
 def delete_item(ID):
     global inventory,user_coins
     user_coins+=inventory[ID][1]
-    balance.config(text="Balance: "+str(user_coins))
+    balance.config(text="Balance: "+str(round(user_coins,2)))
     del inventory[ID]
     inventoryUI()
 
@@ -112,7 +101,7 @@ def inventoryUI():
     total=0
     for widget in frame.winfo_children():
         widget.destroy()
-
+    loop=-1
     for loop in range(len(inventory)):
         total+=inventory[loop][1]
         photo=PhotoImage(file="Images/skins/"+inventory[loop][0])
@@ -120,10 +109,6 @@ def inventoryUI():
         items.append(Button(frame,image=photo,text=inventory[loop][0].split(".")[0]+" / "+str(inventory[loop][1])+" $",compound="top",command = lambda x = loop: item_iventory(x)))
         items[-1].image=photo
         items[-1].grid(column=loop%4,row=loop//4,padx=10,pady=10)
-    try:
-        print(loop)
-    except:
-        loop=-1
     Label(frame,text="Total inventory value: "+str(total),bg="grey40",font="Verdana 11").grid(column=0,row=loop//4+1,padx=10,pady=10)
 
         
@@ -133,7 +118,7 @@ def depositUI():
     def checkCODE():
         global user_coins
         user_coins+=deposit.check_coupon(code.get())
-        balance.config(text="Balance: "+str(user_coins))
+        balance.config(text="Balance: "+str(round(user_coins,2)))
         main_menu(None)
 
     for widget in frame.winfo_children():
@@ -144,10 +129,10 @@ def depositUI():
     Entry(frame,textvariable=code,width=35).grid(column=1,row=0,padx=10,pady=10)
     Button(frame,text="Confirm",command = checkCODE,width=50,bg="green").grid(column=0,row=1,columnspan=2,padx=20,pady=10)
 
-filenames=["Cases/case1.txt","Cases/case2.txt","Cases/case3.txt"]
-casenames=["AWP-DELUXE-CASE","AK-DELUXE-CASE","M4-DELUXE-CASE"]
-case_prices=[70,66,66]
-case_thumbnails=["Images/cases/Case1.png","Images/cases/Case2.png","Images/cases/Case3.png"]
+filenames=["Cases/case1.txt","Cases/case2.txt","Cases/case3.txt","Cases/case4.txt","Cases/case5.txt"]
+casenames=["AWP-DELUXE-CASE","AK-DELUXE-CASE","M4-DELUXE-CASE","MIL-SPEC-CASE","RESTRICTED-CASE"]
+case_prices=[70,66,66,2.25,7.9]
+case_thumbnails=["Images/cases/Case1.png","Images/cases/Case2.png","Images/cases/Case3.png","Images/cases/Case4.png","Images/cases/Case5.png"]
 
 inventory=[]
 user_coins=1000

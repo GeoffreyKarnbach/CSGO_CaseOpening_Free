@@ -61,6 +61,6 @@ def get_expected_value(filename):
             drops[result]+=1
     print(drops,total/amountLoop)
 
-#get_expected_value("Cases/case1.txt")
+#get_expected_value("Cases/case5.txt")
 #print(pull("Cases/case3.txt"))
 

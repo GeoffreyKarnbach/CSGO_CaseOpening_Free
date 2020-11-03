@@ -1,0 +1,12 @@
+0;999;UMP-Blaze.png;15
+1000;1999;MP9-Hot-Rod.png;16
+2000;3999;MAC-10-Fade.png;8
+4000;6999;AUG-Anodized-Navy.png;8
+7000;9999;USP-S-Stainless.png;6
+10000;14999;MAC-10-Amber-Fade.png;4
+15000;24999;AK-Elite-Build.png;2
+25000;39999;USP-S-Lead-Conduit.png;2
+40000;54999;AWP-Capillary.png;0.8
+55000;69999;AK-Uncharted.png;0.6
+70000;84999;M4-Magnesium.png;0.3
+85000;99999;GLOCK-Off-World.png;0.08

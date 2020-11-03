@@ -1,0 +1,13 @@
+0;99;DEAGLE-Blaze.png;300
+100;999;M4-Icarus-Fell.png;135
+1000;1999;DEAGLE-Sunset-Storm.png;55
+2000;3999;DEAGLE-Pilot.png;40
+4000;6999;MP9-Bulldozer.png;25
+7000;9999;USP-S-Overgrowth.png;20
+10000;14999;MP7-Fade.png;7
+15000;24999;AK-Blue-Laminate.png;5
+25000;39999;M4-Griffin.png;4
+40000;54999;MP9-Hypnotic.png;4
+55000;69999;AWP-Worm-God.png;2
+70000;84999;AWP-Phobos.png;2
+85000;99999;GLOCK-Royal-Legion.png;0.85
