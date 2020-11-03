@@ -25,7 +25,7 @@ def get_case_info(filename):
     skins=[]
     
     for loop in content:
-        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),int(loop.split(";")[3].rstrip())])
+        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),float(loop.split(";")[3].rstrip())])
         
     return skins
 
@@ -35,7 +35,7 @@ def pull(filename):
     skins=[]
     
     for loop in content:
-        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),int(loop.split(";")[3].rstrip())])
+        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),float(loop.split(";")[3].rstrip())])
 
     result,price=get_skin_from_ticket(random.randint(0,99999),skins)
     return result,price
@@ -46,7 +46,7 @@ def get_expected_value(filename):
         content=f.readlines()
     skins=[]
     for loop in content:
-        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),int(loop.split(";")[3])])
+        skins.append([int(loop.split(";")[0]),int(loop.split(";")[1]),loop.split(";")[2].rstrip(),float(loop.split(";")[3])])
 
     drops={}
     total=0
@@ -59,7 +59,6 @@ def get_expected_value(filename):
             drops[result]=1
         else:
             drops[result]+=1
-
     print(drops,total/amountLoop)
 
 #get_expected_value("Cases/case1.txt")
